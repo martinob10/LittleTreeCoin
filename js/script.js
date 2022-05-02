@@ -170,7 +170,7 @@ const cotizarConApi = async(monedaApi = "USD", criptoApi = "BTC") => {
     let resultadoApi = await respuestaApi.json();
     resultadoApi = resultadoApi.DISPLAY[criptoApi][monedaApi];
     let divResultado = document.querySelector("#divResultado");
-    divResultado.innerHTML = `<div style="text-align:center"><img src="cargando.gif" width=80 height=80></div>`;
+    divResultado.innerHTML = `<div style="text-align:center"><img src="../cargando.gif" width=80 height=80></div>`;
     setTimeout(() => {
         divResultado.innerHTML = `<div class="precio"> El precio es : <span>${resultadoApi.PRICE}</span></div>`;
 

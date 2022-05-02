@@ -14,7 +14,7 @@
     <title>Little Tree Coin - Inicio</title>
 </head>
 
-<body>
+<body onload="opcionesCriptoApi()">
     <nav>
         <div>
             <h1>Little Tree Coin</h1>
@@ -60,14 +60,29 @@
                 </div>
             </div>
             <div class="row">
+                <div class="row">
+                    <form class="Api">
+                        <label>Moneda:</label>
+                        <select onchange="cotizarMonedaApi()" id="tipoDeMoneda">
+                        <option value="USD">Dolar Estados Unidos</option></select><br>
+                        <label>Criptomoneda:</label>
+                        <select onchange="cotizarMonedaApi()" id="criptoMonedaApi"></select>
+                        <button type="button" class="boton" onclick="cotizarMonedaApi()">Calcular</button>
+                        <div id="msj-error"></div>
+                        <div class="resultado" id="divResultado"></div>
+                    </form>
+                </div>
                 <div class="col-6 text-center">
                     <form>
                         <input type="number" placeholder="Pesos a Invertir" id="pesos" /><br><br>
                         <input type="number" placeholder="Cotizacion Dolar Blue" id="blue" /><br><br>
                         <input type="number" placeholder="Precio del Bitcoin" id="precioBitcoin" /><br><br>
+
                         <input type="number" placeholder="Precio Ethereum" id="precioEthereum" /><br><br>
                         <button type="button" id="btn_cotizar">Cotizar</button>
                     </form>
+
+
                 </div>
                 <div class="col-6 text-center">
                     <div id="Resultado Pesos">

@@ -130,3 +130,56 @@ meGusta.onclick = () => {
 
     })
 }
+
+// ApiCrypto Compare. con un limite de 3 monedas JSON de btc, eth y usdt
+//creacion metodo asincrono
+const opcionesCriptoApi = async() => {
+    //url de la API
+    const url = "https://min-api.cryptocompare.com/data/top/mktcapfull?limit=3&tsym=USD"
+
+    const respuestaApi = await fetch(url);
+    const resultadoApi = await respuestaApi.json();
+
+    console.log(resultadoApi);
+    let selectCripto = document.querySelector("#criptoMonedaApi");
+    let opcionesApiHtml = `<option value=""> - Selecciona - </option>`;
+
+    resultadoApi.Data.map(opcion => {
+        opcionesApiHtml += `<option value="${opcion.CoinInfo.Name}">${opcion.CoinInfo.FullName}</option>`;
+    });
+    //agregar al html
+    selectCripto.innerHTML = opcionesApiHtml;
+}
+
+//funcion para cotizar
+const cotizarMonedaApi = () => {
+    const monedaApi = document.querySelector("#tipoDeMoneda").value;
+    const criptoApi = document.querySelector("#criptoMonedaApi").value;
+
+
+    if (monedaApi === "" || criptoApi === "") {
+        mostrarError("#msj-error", "Falta Seleccionar Datos para Cotizar");
+        return;
+    }
+    cotizarConApi(monedaApi, criptoApi);
+}
+
+const cotizarConApi = async(monedaApi = "USD", criptoApi = "BTC") => {
+    const url = `https://min-api.cryptocompare.com/data/pricemultifull?fsyms=${criptoApi}&tsyms=${monedaApi}`;
+    const respuestaApi = await fetch(url);
+    let resultadoApi = await respuestaApi.json();
+    resultadoApi = resultadoApi.DISPLAY[criptoApi][monedaApi];
+    let divResultado = document.querySelector("#divResultado");
+    divResultado.innerHTML = `<div style="text-align:center"><img src="cargando.gif" width=80 height=80></div>`;
+    setTimeout(() => {
+        divResultado.innerHTML = `<div class="precio"> El precio es : <span>${resultadoApi.PRICE}</span></div>`;
+
+    }, 2000);
+}
+
+
+const mostrarError = (elemento, mensaje) => {
+    divError = document.querySelector(elemento);
+    divError.innerHTML = `<p class="red darken-4 error">${mensaje}</p>`;
+    setTimeout(() => { divError.innerHTML = ``; }, 2000);
+}

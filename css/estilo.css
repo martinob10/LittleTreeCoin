@@ -34,3 +34,11 @@ p {
 img {
     width: 10rem;
 }
+
+.Api {
+    height: 10rem;
+    background-color: aliceblue;
+    padding: 20px;
+    align-content: center;
+    text-align: center;
+}

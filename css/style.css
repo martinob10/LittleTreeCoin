@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  list-style: none;
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+  max-width: 100%;
+  padding: 0.5rem;
+}
+
+nav {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+nav h1 {
+  color: white;
+  font-size: 2rem;
+  padding: 1rem;
+  margin: 1rem;
+  background-color: #221f1f;
+}
+
+nav .link {
+  margin: 1rem;
+  padding: 2rem;
+}
+
+nav .link a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: #7215ec;
+  padding: 1rem;
+  text-decoration: underline;
+}
+
+.saludo h2 {
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.saludo .col6 h2 {
+  text-align: center;
+  padding: 1rem;
+  margin-left: 1.5rem;
+  font-size: 1.8rem;
+  color: #23172e;
+  letter-spacing: .1rem;
+}
+
+p {
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+.logos {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid black;
+  border-radius: 20px;
+  margin: 3rem;
+}
+
+img {
+  width: 10rem;
+}
+
+.invertiFuturo {
+  margin: 1.2rem;
+  background-color: #484dec;
+  color: #eee1e1;
+  -webkit-box-shadow: 5px solid black;
+          box-shadow: 5px solid black;
+  text-align: center;
+}
+
+.Api {
+  padding: 2rem;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.9rem;
+  font-size: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.Api input,
+.Api select,
+.Api textarea {
+  padding: 25px;
+  background-color: #eee8f1;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  /* Separamos la letra del interior (contenido) en los inputs de los bordes */
+}
+
+.Api button {
+  text-align: center;
+  margin: 1rem;
+  padding: 20px 20px;
+  font-size: 1.5rem;
+  color: white;
+  border-radius: 10px;
+  background-color: #484dec;
+  display: block;
+}
+
+.meGusta {
+  background-color: #cccdf4;
+  color: #020202;
+  text-align: center;
+  height: 6rem;
+}
+
+.convertitrCripto {
+  margin: 1rem;
+  padding: 1rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: #dee6f1;
+}
+
+.convertitrCripto .col-8 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: .5rem;
+  color: #07041c;
+}
+
+.convertitrCripto form {
+  font-size: 1.2rem;
+}
+
+.convertitrCripto form input,
+.convertitrCripto form textarea {
+  padding: 5px;
+  border-radius: 10px;
+  /* Separamos la letra del interior (contenido) en los inputs de los bordes */
+}
+
+.convertitrCripto form button {
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  color: white;
+  border-radius: 10px;
+  background-color: #484dec;
+}

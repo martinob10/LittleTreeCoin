@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+  max-width: 100%;
+  padding: 0.5rem;
+}
+
+nav {
+  text-align: center;
+  text-transform: uppercase;
+}
+nav h1 {
+  color: white;
+  font-size: 2rem;
+  padding: 1rem;
+  margin: 1rem;
+  background-color: rgb(34, 31, 31);
+}
+nav .link {
+  background-color: gray;
+  margin: 1rem;
+  padding: 2rem;
+}
+nav .link a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: white;
+  padding: 1rem;
+  text-decoration: underline;
+}
+
+.saludo .col6 h2 {
+  text-align: center;
+  margin-left: 0.9rem;
+  font-size: 1.8rem;
+  color: rgb(35, 23, 46);
+  letter-spacing: 0.1rem;
+}
+
+p {
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+.logos {
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 20px;
+  margin: 3rem;
+}
+
+img {
+  width: 10rem;
+}
+
+.invertiFuturo {
+  background-color: rgb(175, 57, 146);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: rgb(9, 1, 1);
+  text-shadow: 1px 1px 2px rgb(201, 24, 210);
+  text-align: center;
+}
+
+.Api {
+  height: 10rem;
+  background-color: aliceblue;
+  padding: 20px;
+  align-content: center;
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.meGusta {
+  background-color: rgb(26, 8, 26);
+  color: white;
+  text-align: center;
+  height: 6em;
+}
+
+.divResultado {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}/*# sourceMappingURL=style.css.map */

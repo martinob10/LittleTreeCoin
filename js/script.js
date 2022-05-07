@@ -28,14 +28,17 @@ function generador(pesos, blue, precioBitcoin, precioEthereum) {
     let Pesos = pesos / blue;
     let cantidadBtc = Pesos / precioBitcoin;
     let cantidadEth = Pesos / precioEthereum;
+    //limitando decimales
+    cantidadEth = cantidadEth.toFixed(5);
+    cantidadBtc = cantidadBtc.toFixed(5);
     // creacion de equiquetas en el html para poner los resultados
     let new_div = document.createElement("div");
     let new_div_2 = document.createElement("div");
     let new_h3 = document.createElement("h3");
     let new_h4 = document.createElement("h4");
     //se le agrega texto a la etiqueta h3 creada anteriormente
-    new_h3.textContent = "Invirtiendo $" + pesos + ". Dolar Blue a u$s" + blue + ". Precio de Bitcoin a: " + precioBitcoin + ". Podes comprar:  " + cantidadBtc + " Satoshis.";
-    new_h4.textContent = "O podes comprar " + cantidadEth + " Ethereum."
+    new_h3.textContent = "Con $" + pesos + ". Blue u$s" + blue + ". Bitcoin: " + precioBitcoin + ". Podes comprar:  " + cantidadBtc + " BTC.";
+    new_h4.textContent = "O " + cantidadEth + "de ETH."
         //al div creado se le agregan las etiquetas hijas h3
     new_div.appendChild(new_h3);
     new_div_2.appendChild(new_h4);
@@ -170,7 +173,7 @@ const cotizarConApi = async(monedaApi = "USD", criptoApi = "BTC") => {
     let resultadoApi = await respuestaApi.json();
     resultadoApi = resultadoApi.DISPLAY[criptoApi][monedaApi];
     let divResultado = document.querySelector("#divResultado");
-    divResultado.innerHTML = `<div style="text-align:center"><img src="../cargando.gif" width=80 height=80></div>`;
+    divResultado.innerHTML = `<div style="text-align:center"><img src="./cargando.gif" width=80 height=80></div>`;
     setTimeout(() => {
         divResultado.innerHTML = `<div class="precio"> El precio es : <span>${resultadoApi.PRICE}</span></div>`;
 
